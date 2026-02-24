@@ -12,23 +12,23 @@ const Highlights = () => {
           </h2>
           <div className="highlight__wrapper">
             <Highlight
-                icon={<FontAwesomeIcon icon="bolt" />}
-                title="Easy and Quick"
-                para="Get access to the book you purchased online instantly."
+              icon={<FontAwesomeIcon icon="bolt" />}
+              title="Easy and Quick"
+              para="Get access to the book you purchased online instantly."
             />
             <Highlight
-                icon={<FontAwesomeIcon icon="book-open" />}
-                title="10,000+ Books"
-                para="Explore our collection of over 100,000 books across various genres."
-            />  
-            <Highlight
-                icon={<FontAwesomeIcon icon="tags" />}
-                title="Affordable Prices"
-                para="Get your hands on the most popular books at the best prices."
+              icon={<FontAwesomeIcon icon="book-open" />}
+              title="10,000+ Books"
+              para="Explore our collection of over 100,000 books across various genres."
             />
-            </div>
+            <Highlight
+              icon={<FontAwesomeIcon icon="tags" />}
+              title="Affordable Prices"
+              para="Get your hands on the most popular books at the best prices."
+            />
           </div>
         </div>
+      </div>
     </section>
   );
 };
