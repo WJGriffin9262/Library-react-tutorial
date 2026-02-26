@@ -16,10 +16,10 @@ const Book = ({ book }) => {
       setTimeout(() => {
         if (mountedRef.current) setImg(image);
       }, 300);
-    };
 
-    return () => {
-      mountedRef.current = false;
+      return () => {
+        mountedRef.current = false;
+      };
     };
   }, [book.url]);
   return (
@@ -44,12 +44,14 @@ const Book = ({ book }) => {
           />
         </>
       ) : (
-        <></>
+        // show skeletons until the image has loaded
+        <>
+          <div className="book__img--skeleton"></div>
+          <div className="skeleton book__title--skeleton"></div>
+          <div className="skeleton book__rating--skeleton"></div>
+          <div className="skeleton book__price--skeleton"></div>
+        </>
       )}
-      <div className="book__img--skeleton"></div>
-      <div className="skeleton book__title--skeleton"></div>
-      <div className="skeleton book__rating--skeleton"></div>
-      <div className="skeleton book__price--skeleton"></div>
     </div>
   );
 };
